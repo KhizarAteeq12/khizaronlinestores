@@ -1,0 +1,233 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #fafaf8;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #d4af37;
+  --primary-foreground: #1a1a1a;
+  --secondary: #f5e6d3;
+  --secondary-foreground: #1a1a1a;
+  --muted: #e8e8e8;
+  --muted-foreground: #666666;
+  --accent: #ffd700;
+  --accent-foreground: #1a1a1a;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(212, 175, 55, 0.2);
+  --input: transparent;
+  --input-background: #f9f9f7;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #d4af37;
+  --chart-1: #d4af37;
+  --chart-2: #f5e6d3;
+  --chart-3: #ffd700;
+  --chart-4: #8b8b8b;
+  --chart-5: #666666;
+  --radius: 0.625rem;
+  --sidebar: #fafaf8;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #1a1a1a;
+  --sidebar-accent: #f5e6d3;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: rgba(212, 175, 55, 0.2);
+  --sidebar-ring: #d4af37;
+  --gold: #d4af37;
+  --gold-light: #ffd700;
+  --gold-dark: #b8941f;
+  --grey-light: #e8e8e8;
+  --grey-dark: #666666;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --foreground: #fafaf8;
+  --card: #2a2a2a;
+  --card-foreground: #fafaf8;
+  --popover: #2a2a2a;
+  --popover-foreground: #fafaf8;
+  --primary: #d4af37;
+  --primary-foreground: #1a1a1a;
+  --secondary: #3a3a3a;
+  --secondary-foreground: #fafaf8;
+  --muted: #3a3a3a;
+  --muted-foreground: #a8a8a8;
+  --accent: #ffd700;
+  --accent-foreground: #1a1a1a;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: rgba(212, 175, 55, 0.3);
+  --input: #3a3a3a;
+  --ring: #d4af37;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #d4af37;
+  --chart-2: #f5e6d3;
+  --chart-3: #ffd700;
+  --chart-4: #8b8b8b;
+  --chart-5: #666666;
+  --sidebar: #2a2a2a;
+  --sidebar-foreground: #fafaf8;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #1a1a1a;
+  --sidebar-accent: #3a3a3a;
+  --sidebar-accent-foreground: #fafaf8;
+  --sidebar-border: rgba(212, 175, 55, 0.3);
+  --sidebar-ring: #d4af37;
+  --gold: #d4af37;
+  --gold-light: #ffd700;
+  --gold-dark: #b8941f;
+  --grey-light: #3a3a3a;
+  --grey-dark: #a8a8a8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-grey-light: var(--grey-light);
+  --color-grey-dark: var(--grey-dark);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Custom animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px var(--gold)) drop-shadow(0 0 10px var(--gold));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--gold-light)) drop-shadow(0 0 30px var(--gold-light));
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  background-size: 1000px 100%;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
